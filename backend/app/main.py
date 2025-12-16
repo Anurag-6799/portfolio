@@ -14,7 +14,7 @@ app = FastAPI(
 app.add_middleware(LoggingMiddleware)
 
 # CORS Configuration
-# Allow requests from the frontend (will be running on localhost:5173 usually for Vite)
+# Allow requests from the frontend (will be running on localhost:5173)
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",

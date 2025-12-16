@@ -4,13 +4,13 @@ from app.models.schemas import Bio, Experience, Project, Skill, Certification
 
 PROFILE_DATA = Bio(
     name="Anurag Kumar Singh",
-    title="Software Developer", # Updated per request
+    title="Software Developer",
     bio="Backend Engineer specialized in architecting fault-tolerant, high-performance distributed systems. Currently at Vetic, designing secure financial pipelines and multi-level caching strategies. Passionate about System Design, Cloud Architecture, and the Python ecosystem.",
     location="New Delhi, India",
     learning_goals="Currently mastering: AWS Cloud Architecture (Lambda, EC2), System Design Patterns (Circuit Breaker, Rate Limiting), and Microservices.",
     social_links={
-        "github": "https://github.com/Chilli3012", 
-        "linkedin": "https://linkedin.com/in/" 
+        "github": "https://github.com/Anurag-6799", 
+        "linkedin": "https://www.linkedin.com/in/anurag-kumar-singh-ba30/" 
     },
     education="B.Tech | Netaji Subhas University of Technology (NSUT) | 2020-2024"
 )
@@ -19,7 +19,7 @@ EXPERIENCE_DATA = [
     Experience(
         id=1,
         company="Vetic",
-        role="SDE", # Updated from screenshot
+        role="SDE",
         duration="May 2025 - Present",
         description=[
             "Engineered a secure financial transaction system using FastAPI that successfully manages the entire lifecycle of invoices and returns, safeguarding critical business data.",
@@ -80,7 +80,7 @@ PROJECTS_DATA = [
         description="Full-stack MERN application for creating, editing, and managing notes.",
         features=["User authentication (JWT)", "Secure API endpoints (Express, MongoDB)", "Responsive React.js frontend"],
         date="Feb 2025 - Feb 2025",
-        github_link="https://github.com/Chilli3012" # Placeholder as specific repo not shown
+        github_link="https://github.com/Chilli3012"
     ),
     Project(
         id=2,
