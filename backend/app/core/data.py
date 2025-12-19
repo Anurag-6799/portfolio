@@ -122,25 +122,20 @@ PROJECTS_DATA = [
 
 SKILLS_DATA = [
     # Languages
-    Skill(name="Python (Expert)", category="Languages"),
-    Skill(name="C++ (Proficient)", category="Languages"),
-    Skill(name="JavaScript", category="Languages"),
-    Skill(name="SQL (PostgreSQL)", category="Languages"),
+    Skill(name="Python", category="Languages"),
+    Skill(name="C++", category="Languages"),
+    Skill(name="JavaScript", category="Languages")
 
     # Backend
     Skill(name="FastAPI", category="Backend"),
     Skill(name="Django", category="Backend"),
-    Skill(name="Django REST Framework (DRF)", category="Backend"),
     Skill(name="Node.js", category="Backend"),
     Skill(name="Express.js", category="Backend"),
-    Skill(name="Pydantic", category="Backend"),
-    Skill(name="SQLAlchemy", category="Backend"),
 
     # Database
     Skill(name="MongoDB (Aggregation Pipelines)", category="Database"),
     Skill(name="PostgreSQL", category="Database"),
     Skill(name="Redis (L1/L2 Caching strategies)", category="Database"),
-    Skill(name="MySQL", category="Database"),
 
     # Frontend
     Skill(name="React.js", category="Frontend"),
@@ -151,7 +146,7 @@ SKILLS_DATA = [
     Skill(name="Docker", category="DevOps"),
     Skill(name="Git", category="DevOps"),
     Skill(name="GitHub Actions", category="DevOps"),
-    Skill(name="Linux (Shell Scripting)", category="DevOps"),
+    Skill(name="Linux", category="DevOps"),
     Skill(name="CI/CD", category="DevOps"),
 
     # Cloud

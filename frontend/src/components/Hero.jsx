@@ -67,7 +67,7 @@ const Hero = ({ bio }) => {
                             </p>
 
                             <p className="text-gray-300 leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-                                Backing engineering at <strong className="text-white">Vetic</strong>. Architecting fault-tolerant systems with Python & FastAPI.
+                                Backed engineer at <strong className="text-white">Vetic</strong>. Architecting fault-tolerant systems with Python & FastAPI.
                             </p>
 
                             <div className="flex items-center justify-center md:justify-start gap-4">
