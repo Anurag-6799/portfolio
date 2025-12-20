@@ -124,7 +124,7 @@ SKILLS_DATA = [
     # Languages
     Skill(name="Python", category="Languages"),
     Skill(name="C++", category="Languages"),
-    Skill(name="JavaScript", category="Languages")
+    Skill(name="JavaScript", category="Languages"),
 
     # Backend
     Skill(name="FastAPI", category="Backend"),
