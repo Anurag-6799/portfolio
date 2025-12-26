@@ -1,0 +1,56 @@
+name: Update Competitive Programming Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs at 00:00 UTC every day
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed if we still want to commit to repo
+      id-token: write # Needed for AWS OIDC (if used, but user provided secrets)
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch Stats
+        run: python scripts/fetch_stats.py
+
+      # Optional: Commit to repo so local dev environment stays in sync
+      - name: Commit and Push changes to Repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/assets/competitive-stats.json
+          git commit -m "chore: update competitive stats [skip ci]" || echo "No changes to commit"
+          git push
+
+      # AWS Deployment Steps
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1 # Adjust if needed, or ask user. Defaulting to us-east-1 commonly used for CloudFront/S3 global
+          # Note: User didn't specify region, usually us-east-1 for CloudFront.
+
+      - name: Upload to S3
+        run: |
+          aws s3 cp frontend/public/assets/competitive-stats.json s3://${{ secrets.S3_BUCKET_NAME }}/assets/competitive-stats.json --cache-control "max-age=0, no-cache"
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/assets/competitive-stats.json"
