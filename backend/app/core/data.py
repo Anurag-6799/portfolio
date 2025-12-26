@@ -161,9 +161,9 @@ SKILLS_DATA = [
 ]
 
 CERTIFICATIONS_DATA = [
-    Certification(name="Foundation of Machine Learning", issuer="IIIT Hyderabad", date="Jul 2022", credential_link="#"),
-    Certification(name="CodeChef SnackDown 2021", issuer="CodeChef", date="Dec 2021", credential_link="#"),
-    Certification(name="Cracked Leaked Password Database", issuer="Goldman Sachs", date="Sep 2021", credential_link="#"),
-    Certification(name="Applied Data Science with Python", issuer="IIT Roorkee", date="Aug 2021", credential_link="#"),
-    Certification(name="Data Structures and Algorithms in C++", issuer="Coding Blocks", date="Jul 2021", credential_link="#")
+    Certification(name="Foundation of Machine Learning", issuer="IIIT Hyderabad", date="Jul 2022", credential_link="https://drive.google.com/file/d/1RbUOY_OLmzdq0MBYk0oBLqmva02tNOSo/view?usp=sharing"),
+    Certification(name="CodeChef SnackDown 2021", issuer="CodeChef", date="Dec 2021", credential_link="https://drive.google.com/file/d/1QY_VrggUqFuPD2fke0y0d-3HuPS-0m0R/view?usp=sharing"),
+    Certification(name="Cracked Leaked Password Database", issuer="Goldman Sachs", date="Sep 2021", credential_link="https://drive.google.com/file/d/1VhAcwmONv7dQfgFE100Z5o8K_ToI7mhn/view?usp=sharing"),
+    Certification(name="Applied Data Science with Python", issuer="IIT Roorkee", date="Aug 2021", credential_link="https://drive.google.com/file/d/1C1doj6e8J-CzXz5kYETFyCMQuWBnbzTK/view?usp=sharing"),
+    Certification(name="Data Structures and Algorithms in C++", issuer="Coding Blocks", date="Jul 2021", credential_link="https://drive.google.com/file/d/116a4fU2WMixR054jNesihidhgUWggQHG/view?usp=sharing")
 ]

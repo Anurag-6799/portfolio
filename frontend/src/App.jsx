@@ -4,6 +4,7 @@ import About from './components/About';
 import TechStack from './components/TechStack';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import CompetitiveProgramming from './components/CompetitiveProgramming';
 import Certifications from './components/Certifications'; // New
 import Contact from './components/Contact';
 import { usePortfolioData } from './hooks/usePortfolioData';
@@ -40,6 +41,7 @@ function App() {
       <TechStack skills={data.skills} />
       <Experience experience={data.experience} />
       <Projects projects={data.projects} />
+      <CompetitiveProgramming />
       <Certifications certifications={data.certifications} />
       <Contact />
 
