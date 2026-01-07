@@ -11,7 +11,7 @@
     "hardSolved": 1,
     "totalHard": 899,
     "acceptanceRate": 65.0,
-    "ranking": 4214272,
+    "ranking": 4102600,
     "contributionPoints": 303,
     "reputation": 0,
     "submissionCalendar": {
@@ -39,5 +39,5 @@
   "cses": {
     "solved": 0
   },
-  "lastUpdated": "2026-01-06T01:15:00Z"
+  "lastUpdated": "2026-01-07T01:15:29Z"
 }
