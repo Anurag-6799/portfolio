@@ -2,17 +2,17 @@
   "leetcode": {
     "status": "success",
     "message": "retrieved",
-    "totalSolved": 22,
-    "totalQuestions": 3883,
-    "easySolved": 7,
-    "totalEasy": 934,
+    "totalSolved": 27,
+    "totalQuestions": 3887,
+    "easySolved": 12,
+    "totalEasy": 935,
     "mediumSolved": 12,
-    "totalMedium": 2032,
+    "totalMedium": 2033,
     "hardSolved": 3,
-    "totalHard": 917,
-    "acceptanceRate": 68.75,
-    "ranking": 3833263,
-    "contributionPoints": 308,
+    "totalHard": 919,
+    "acceptanceRate": 72.22,
+    "ranking": 3835547,
+    "contributionPoints": 319,
     "reputation": 0,
     "submissionCalendar": {
       "1748131200": 4,
@@ -28,7 +28,8 @@
       "1767571200": 2,
       "1768608000": 1,
       "1768694400": 6,
-      "1769212800": 1
+      "1769212800": 1,
+      "1774742400": 6
     }
   },
   "codeforces": {
@@ -41,5 +42,5 @@
   "cses": {
     "solved": 0
   },
-  "lastUpdated": "2026-03-29T01:54:37Z"
+  "lastUpdated": "2026-03-30T01:56:57Z"
 }
