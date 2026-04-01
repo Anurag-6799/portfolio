@@ -3,15 +3,15 @@
     "status": "success",
     "message": "retrieved",
     "totalSolved": 27,
-    "totalQuestions": 3887,
+    "totalQuestions": 3888,
     "easySolved": 12,
     "totalEasy": 935,
     "mediumSolved": 12,
     "totalMedium": 2033,
     "hardSolved": 3,
-    "totalHard": 919,
+    "totalHard": 920,
     "acceptanceRate": 72.22,
-    "ranking": 3462884,
+    "ranking": 3465407,
     "contributionPoints": 320,
     "reputation": 0,
     "submissionCalendar": {
@@ -42,5 +42,5 @@
   "cses": {
     "solved": 0
   },
-  "lastUpdated": "2026-03-31T01:52:49Z"
+  "lastUpdated": "2026-04-01T02:01:09Z"
 }
