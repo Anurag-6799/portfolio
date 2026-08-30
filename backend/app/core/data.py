@@ -119,39 +119,41 @@ EXPERIENCE_DATA = [
 PROJECTS_DATA = [
     Project(
         id=1,
-        title="SheetBase - Sheets to API Platform",
-        tech_stack=["Python", "FastAPI", "PostgreSQL", "Redis", "OAuth2", "Alembic"],
-        description=(
-            "A Backend-as-a-Service that turns any Google Sheet into a secured, low-latency REST endpoint - so a "
-            "non-technical team can keep editing a spreadsheet while the product reads it as a real API."
-        ),
-        features=[
-            "Google OAuth2 flow with Fernet-encrypted refresh tokens",
-            "Cache-aside Redis layer: ~600ms reads to under 20ms",
-            "Write-time invalidation keeps cached rows honest",
-            "Async stack: asyncpg + Alembic migrations",
-            "Layered api / services / db architecture",
-        ],
-        date="2026",
-        github_link="https://github.com/Anurag-6799/SheetBase_backend",
-    ),
-    Project(
-        id=2,
         title="Redis Radar - VS Code Extension",
-        tech_stack=["TypeScript", "Node.js", "Redis", "VS Code API"],
+        tech_stack=["TypeScript", "Node.js", "ioredis", "VS Code API"],
         description=(
             "An open-source Redis client that lives inside VS Code, so inspecting a key does not mean leaving the "
-            "editor for a separate GUI or a redis-cli tab."
+            "editor for a separate GUI or a redis-cli tab. 1.4k lines of TypeScript across 9 commands."
         ),
         features=[
-            "Multi-profile connection management (local + remote)",
-            "Glob key search and JSON pretty-printing",
-            "TTL, type and size inspection at a glance",
-            "Lazy-loading tree stays responsive on 1000s of keys",
-            "Flush and delete actions with MIT licence",
+            "Cursor-based SCAN paging - never blocks the server like KEYS",
+            "Multi-profile connections; passwords in VS Code SecretStorage",
+            "Persistent partial-match key search",
+            "All five value types with TTL and type inspection",
+            "Webview output HTML-escaped against XSS",
+            "Delete and FLUSHDB gated behind explicit confirmation",
         ],
         date="2026",
         github_link="https://github.com/Anurag-6799/Redis-Radar",
+    ),
+    Project(
+        id=2,
+        title="SheetBase - OAuth2 Service",
+        tech_stack=["Python", "FastAPI", "PostgreSQL", "OAuth2", "SQLAlchemy", "Alembic"],
+        description=(
+            "The authentication foundation for a Sheets-to-API service: the part that has to be right before any "
+            "of the interesting caching work is worth writing. Currently the OAuth layer only - the sheet-reading "
+            "and cache tiers are still ahead of it."
+        ),
+        features=[
+            "Google OAuth2 authorisation-code flow, read-only Drive + Sheets scopes",
+            "Refresh tokens encrypted at rest with Fernet",
+            "Idempotent user upsert, rollback on any failure",
+            "Async stack: SQLAlchemy + asyncpg, Alembic migrations",
+            "Client config held in env vars, never a checked-in JSON file",
+        ],
+        date="2026",
+        github_link="https://github.com/Anurag-6799/SheetBase_backend",
     ),
     Project(
         id=3,
