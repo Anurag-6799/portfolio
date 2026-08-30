@@ -17,7 +17,10 @@ class Experience(BaseModel):
     company: str
     role: str
     duration: str
+    # Each entry is "Workstream: what I built" - the UI bolds the part before the colon.
     description: List[str]
+    location: Optional[str] = None
+    tech: List[str] = []
 
 class Project(BaseModel):
     id: int

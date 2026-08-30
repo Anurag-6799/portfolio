@@ -54,7 +54,7 @@ const Hero = ({ bio }) => {
                                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono tracking-widest uppercase mb-4"
                             >
                                 <Code2 size={12} />
-                                Software Developer
+                                {bio.title}
                             </motion.div>
 
                             <h1 className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tight">
@@ -63,11 +63,13 @@ const Hero = ({ bio }) => {
 
                             <p className="text-xl text-gray-400 font-light mb-6 flex items-center justify-center md:justify-start gap-2">
                                 <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                                {bio.title}
+                                {bio.location}
                             </p>
 
                             <p className="text-gray-300 leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-                                Backed engineer at <strong className="text-white">Vetic</strong>. Architecting fault-tolerant systems with Python & FastAPI.
+                                Backend Developer (SDE-1) at <strong className="text-white">Vetic</strong>, building distributed
+                                systems in Python, FastAPI and Django &mdash; idempotent financial pipelines, promotion engines,
+                                and the Redis layer underneath them.
                             </p>
 
                             <div className="flex items-center justify-center md:justify-start gap-4">

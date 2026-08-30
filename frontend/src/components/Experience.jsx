@@ -1,6 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// Bullets are written as "Workstream: what I built". Bold the label, keep the rest
+// as body text. Only treat a short leading segment as a label so a colon later in
+// the sentence is left alone.
+const splitLabel = (point) => {
+    const i = point.indexOf(':');
+    return i > 0 && i < 40 ? [point.slice(0, i), point.slice(i + 1).trim()] : [null, point];
+};
+
 const Experience = ({ experience }) => {
     if (!experience) return null;
 
@@ -41,16 +49,35 @@ const Experience = ({ experience }) => {
                                     </span>
                                 </div>
 
-                                <h4 className="text-xl text-gray-400 mb-6 font-medium">{job.company}</h4>
+                                <h4 className="text-xl text-gray-400 mb-6 font-medium">
+                                    {job.company}
+                                    {job.location && <span className="text-gray-600 text-base"> · {job.location}</span>}
+                                </h4>
 
                                 <ul className="space-y-3">
-                                    {job.description.map((point, i) => (
-                                        <li key={i} className="text-gray-300 flex items-start gap-3 text-base leading-relaxed">
-                                            <span className="text-primary mt-1.5 text-xs">▹</span>
-                                            {point}
-                                        </li>
-                                    ))}
+                                    {job.description.map((point, i) => {
+                                        const [label, body] = splitLabel(point);
+                                        return (
+                                            <li key={i} className="text-gray-300 flex items-start gap-3 text-base leading-relaxed">
+                                                <span className="text-primary mt-1.5 text-xs">▹</span>
+                                                <span>
+                                                    {label && <strong className="text-white font-semibold">{label}: </strong>}
+                                                    {body}
+                                                </span>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
+
+                                {job.tech?.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-white/5">
+                                        {job.tech.map(tech => (
+                                            <span key={tech} className="text-xs font-mono text-primary bg-primary/5 px-2 py-1 rounded border border-primary/10">
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}
